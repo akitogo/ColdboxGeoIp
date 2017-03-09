@@ -2,6 +2,11 @@
 
 Submit the IP and get back the originating country. Works with a local, free database
 
+Implements https://github.com/maxmind/GeoIP2-java for Coldfusion as Coldbox module
+
+Get updated database from: http://dev.maxmind.com/geoip/geoip2/geolite2/
+
+
 	property name="geoipService" inject="id:geoipService@geoip";
 	
 	function index(event,rc,prc){
