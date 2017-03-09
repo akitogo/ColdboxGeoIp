@@ -27,3 +27,9 @@ Get updated database from: http://dev.maxmind.com/geoip/geoip2/geolite2/
     
     abort;
 	}
+	
+## Todo
+
+- update mechanism for database
+- implement city database as well
+- error handling and testing
