@@ -45,9 +45,9 @@ component {
 
 	// Module Properties
 	this.title 				= "geoip";
-	this.author 			= "";
-	this.webURL 			= "";
-	this.description 		= "";
+	this.author 			= "Akitogo";
+	this.webURL 			= "www.akitogo.com";
+	this.description 		= "Service for maxmind GeoLite2 Free";
 	this.version			= "1.0.0";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
@@ -62,7 +62,7 @@ component {
 	// Auto-map models
 	this.autoMapModels		= true;
 	// Module Dependencies
-	this.dependencies 		= [];
+	this.dependencies 		= ['cbjavaloader'];
 
 	function configure(){
 
@@ -71,7 +71,9 @@ component {
 
 		};
 
-		// module settings - stored in modules.name.settings
+		// points to the database file
+		// downlaod from here: http://dev.maxmind.com/geoip/geoip2/geolite2/
+		// GeoLite2 databases are updated on the first Tuesday of each month.
 		settings = {
 			databasefile=getDirectoryFromPath( getCurrentTemplatePath() ) & "database/GeoLite2-Country.mmdb"
 		};
@@ -104,7 +106,7 @@ component {
 		];
 
 		// Binder Mappings
-		// binder.map("Alias").to("#moduleMapping#.model.MyService");
+		//binder.map("geoIpService@geoip").to("#moduleMapping#.models.geoIpService").asSingleton();
 
 	}
 
