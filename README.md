@@ -10,26 +10,50 @@ Get updated database from: http://dev.maxmind.com/geoip/geoip2/geolite2/
 	property name="geoipService" inject="id:geoipService@geoip";
 	
 	function index(event,rc,prc){
-		var country=geoipService.getCountryIsoCode("128.101.101.101");
-		writeDump(country);
-    
-		var country=geoipService.getCountryName("128.101.101.101");
-		writeDump(country);
-    
-		var country=geoipService.getCountryNameByCountryId("128.101.101.101","de");
-		writeDump(country);
+		// COUNTRY
+	    var country=geoipCountry.getCountryIsoCode("128.101.101.101");
+	    writeDump(country);
+	
+	    var country=geoipCountry.getCountryName("128.101.101.101");
+	    writeDump(country);
+	
+	    var country=geoipCountry.getCountryNameByCountryId("128.101.101.101","de");
+	    writeDump(country);
+	
+	    var country=geoipCountry.getCountryAsjson("128.101.101.101");
+	    writeDump(country);
+	
+	    var country=geoipCountry.getCountryObject("128.101.101.101");
+	    writeDump(country);
 
-		var country=geoipService.getCountryAsjson("128.101.101.101");
-		writeDump(country);
-    
-		var country=geoipService.getCountryObject("128.101.101.101");
-		writeDump(country);
+		// CITY
+	    var city=geoipCity.getCityName("128.101.101.101");
+	    writeDump(city);
+	
+	    var city=geoipCity.getCityNameByCountryId("128.101.101.101","de");
+	    writeDump(city);
+	
+	    var city=geoipCity.getLatitude("128.101.101.101");
+	    writeDump(city);
+
+	    var city=geoipCity.getLongitude("128.101.101.101");
+	    writeDump(city);
+
+	    var city=geoipCity.getCityAsjson("128.101.101.101");
+	    writeDump(city);
+
+	    var city=geoipCity.getCityObject("128.101.101.101");
+	    writeDump(city);
     
     abort;
 	}
 	
+## Versions
+1.1 added support for city database
+
+1.0 initial commit
+
 ## Todo
 
 - update mechanism for database
-- implement city database as well
 - error handling and testing
