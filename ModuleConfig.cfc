@@ -48,7 +48,7 @@ component {
 	this.author 			= "Akitogo";
 	this.webURL 			= "www.akitogo.com";
 	this.description 		= "Service for maxmind GeoLite2 Free";
-	this.version			= "1.0.0";
+	this.version			= "1.1.0";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
@@ -75,7 +75,8 @@ component {
 		// downlaod from here: http://dev.maxmind.com/geoip/geoip2/geolite2/
 		// GeoLite2 databases are updated on the first Tuesday of each month.
 		settings = {
-			databasefile=getDirectoryFromPath( getCurrentTemplatePath() ) & "database/GeoLite2-Country.mmdb"
+			countryDatabase=getDirectoryFromPath( getCurrentTemplatePath() ) & "database/GeoLite2-Country.mmdb"
+			,cityDatabase=getDirectoryFromPath( getCurrentTemplatePath() ) & "database/GeoLite2-City.mmdb"
 		};
 
 		// Layout Settings

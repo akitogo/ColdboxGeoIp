@@ -1,21 +1,21 @@
 {
     "name":"geoip",
-    "version":"1.0.0",
+    "version":"1.1.0",
     "author":"Akitogo",
     "location":"https://github.com/akitogo/ColdboxGeoIp/archive/master.zip",
     "directory":"",
     "createPackageDirectory":true,
     "packageDirectory":"",
     "homepage":"https://github.com/akitogo/ColdboxGeoIp",
-    "documentation":"",
+    "documentation":"https://github.com/akitogo/ColdboxGeoIp",
     "repository":{
         "type":"git",
         "URL":"https://github.com/akitogo/ColdboxGeoIp.git"
     },
-    "bugs":"",
+    "bugs":"https://github.com/akitogo/ColdboxGeoIp/issues",
     "slug":"ColdboxGeoIp",
-    "shortDescription":"Service for maxmind GeoLite2 Free",
-    "description":"submit the IP and get back the originating country",
+    "shortDescription":"GeoIp Service for maxmind GeoLite2 Free",
+    "description":"Submit the IP and get back the originating country. Works with a local, free database",
     "instructions":"",
     "changelog":"",
     "type":"modules",
@@ -34,8 +34,8 @@
     "projectURL":"",
     "license":[
         {
-            "type":"",
-            "URL":""
+            "type":"Apache2",
+            "URL":"http://www.apache.org/licenses/LICENSE-2.0"
         }
     ],
     "contributors":[
